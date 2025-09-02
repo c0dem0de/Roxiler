@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React – NestJS Client (Updated UI)</title>
+    <style>
+      :root{
+        --bg: #06121a;
+        --card: #08202b;
+        --muted: #7b99a7;
+        --text: #d5eef5;
+        --accent: #2ff4c7;
+        --accent-dark: #1ad2a3;
+      }
+      html,body,#root{height:100%}
+      body{
+        margin:0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        background: radial-gradient(1200px 600px at 10% 10%, rgba(32,72,94,0.12), transparent 8%),
+                    linear-gradient(180deg, rgba(0,0,0,0.18), transparent 20%),
+                    var(--bg);
+        color:var(--text);
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+      }
+      .container{max-width:1100px;margin:0 auto;padding:20px}
+      .nav{display:flex;gap:12px;align-items:center;padding:12px 0}
+      .pill{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted);text-decoration:none}
+      .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:20px;box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+      input,select,button,textarea{font-family:inherit}
+      input,select,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:10px;color:var(--text);outline:none}
+      input::placeholder{color:rgba(213,238,245,0.45)}
+      button{background:var(--accent);border:none;padding:10px 14px;border-radius:8px;color:#002827;font-weight:700;cursor:pointer}
+      .grid{display:grid;gap:12px}
+      .grid-2{grid-template-columns:repeat(2,1fr)}
+      table{width:100%;border-collapse:collapse;margin-top:8px}
+      th,td{padding:8px 10px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03);font-size:0.95rem}
+      .muted{color:var(--muted);font-size:0.95rem}
+      .center-full{height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+      /* Tabs */
+      .tabs{display:flex;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.04);margin-bottom:12px}
+      .tab{flex:1;padding:12px 14px;text-align:center;cursor:pointer;color:var(--muted);background:transparent}
+      .tab.active{background:linear-gradient(90deg, rgba(47,244,199,0.06), rgba(47,244,199,0.03));color:var(--accent);font-weight:600}
+      /* Stars */
+      .stars{letter-spacing:4px;font-size:1rem}
+      .stars .on{color:var(--accent)}
+      /* Responsive */
+      @media(max-width:720px){
+        .grid-2{grid-template-columns:1fr}
+        .card{padding:16px}
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
